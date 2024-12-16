@@ -16,11 +16,11 @@ body {
   width: 100%;
 }
 
-.aaa .more_inf {
+.aaa .more-inf {
   font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .aaa {
     text-align: center;
   }
@@ -68,7 +68,7 @@ button {
 }
 
 button:hover {
-  color: #3a3A3a;
+  color: #3a3a3a;
 }
 
 /* Heading */
@@ -160,11 +160,11 @@ ul li input[type="text"] {
   display: none;
 }
 
-ul li.editmode input[type="text"] {
+ul li.edit-mode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editmode label {
+ul li.edit-mode label {
   display: none;
 }
