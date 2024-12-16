@@ -1,5 +1,5 @@
 /* Basic Style */
-.page {
+.todo {
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
@@ -12,11 +12,11 @@
   text-align: right;
 }
 
-.header-img {
+.header__img {
   width: 100%;
 }
 
-.header .link-info {
+.header__link-info {
   font-family: fantasy, cursive;
 }
 
@@ -26,10 +26,15 @@
   }
 }
 
-.main-page {
+.todo__body {
   display: block;
   width: 500px;
-  margin: 0 auto 0;
+  margin: 0 auto;
+  padding: 20px 0px;
+}
+
+.todo__wrapper {
+  margin: 0px 50px;
 }
 
 .task-input,
@@ -39,13 +44,15 @@
   flex-grow: 1;
 }
 
-.task-wrapper {
+.section-todo__wrapper {
   display: flex;
+  margin: 20px 0px;
+  padding: 0px 20px 0px 0px;
 }
 
-.todo-body {
+.todo-items {
   margin: 0;
-  padding: 0px;
+  padding: 0px 20px 0px 0px;
 }
 
 .todo-item,
@@ -69,6 +76,7 @@
 }
 
 .btn:hover {
+  transition: color 300ms ease-in;
   color: #3a3a3a;
 }
 
@@ -112,60 +120,65 @@
 }
 
 /* Task list */
-.todo-item {
+.todo-items__row {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 10px;
 }
 
-.todo-item > * {
+.todo-items__row > * {
   vertical-align: middle;
 }
 
-.todo-item > .task-input[type="checkbox"] {
+.todo-items__row > .task-input[type="checkbox"] {
   margin: 0 10px;
 }
 
-.todo-item > .task-label {
+.todo-items__row > .task-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.todo-item > .task-input[type="text"] {
+.todo-items__row > .task-input[type="text"] {
   width: 226px;
 }
 
-.btn-img {
+.btn__img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.del-btn .btn-img:hover {
+.btn--del .btn__img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.todo-body#done .task-label {
+.todo-items#done .task-label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.todo-body .todo-item .task-input[type="text"] {
+.todo-items .todo-items__row .task-input[type="text"] {
   display: none;
 }
 
-.todo-body .todo-item.edit .task-input[type="text"] {
+.todo-items .todo-items__row.edit .task-input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-.todo-body .todo-item.edit .task-label {
+.todo-items .todo-items__row.edit .task-label {
   display: none;
+}
+
+.todo-items__check {
+  cursor: pointer;
 }
